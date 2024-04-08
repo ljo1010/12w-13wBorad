@@ -66,13 +66,21 @@ function App() {
               }}>👍</span>{따봉[i]}
             </h4>
             <p>2월 18일 발행</p>
-            <button>삭제</button>
+            <button onClick={() => {
+              let copy = [...글제목]
+              copy.splice(i, 1);
+              글제목변경(copy);
+            }}>삭제</button>
           </div>)
         }) 
       }
 
       <input onChange={(e) => {입력값변경(e.target.value); console.log(입력값)}} />
-      <button>업로드</button>
+      <button onClick={() => {
+        let copy = [...글제목];
+        copy.unshift(입력값);
+        글제목변경(copy)
+      }}>업로드</button>
       {/* 이게 이제 컴포넌트 문법 그리고 여기서는 html부분이기 떄문에 if문 
       사용 못한다. 삼향 연산자를 쓰도록 하자. return 값이 있는 조건문이기 떄문이다.*/}
       {
@@ -83,9 +91,6 @@ function App() {
   );
 }
 
-function 함수(){
-  
-}
 
 function Modal(props){
   return (
