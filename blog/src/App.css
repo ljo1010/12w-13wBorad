@@ -1,6 +1,14 @@
 .App {
   text-align: center;
 }
+
+.modal {
+  margin-top: 20px;
+  padding: 20px;
+  background: #eee;
+  text-align: left;
+}
+
 .blakc-nav{
   display: flex;
   background: black;
@@ -8,13 +16,14 @@
   color: white;
   padding-left: 20px;
 }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
 
-div{
+.div{
   box-sizing: border-box;
 }
 
